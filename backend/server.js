@@ -1,9 +1,12 @@
 const express = require('express');
-const api = express();
+const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
-api.use(express.json());
-mongoose.connect("mongodb://localhost:27017/api-rest", {useNewUrlParser: true});
+app.use(express.json());
+app.use(cors());
 
-api.use(cors());
-api.listen(3003);
+mongoose.connect("mongodb://localhost:27017/api-rest", {useNewUrlParser: true});
+require('./src/models/Users');
+
+app.use('/apiRest', require('./src/routes'));
+app.listen(3001);
