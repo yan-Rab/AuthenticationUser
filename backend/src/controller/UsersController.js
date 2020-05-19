@@ -26,7 +26,7 @@ module.exports = {
     },
 
     async searchUsers(request,response){
-        const users = await Users.find();
+        const users = await Users.paginate();
         return response.json(users);
     },
 

@@ -1,11 +1,13 @@
 .body-main{
     display: flex;
     width: 100%;
+    
     justify-content: center;
     align-items: center;
 }
 
 .body-main form{
+    margin-top: 40px;
     display: flex;
     padding: 20px;
     justify-content: center;
@@ -21,23 +23,28 @@
     height: 35px;
     margin-bottom: 20px;
     border-radius: 2px;
-    background-color:#eaeaea ;
+    padding: 5px;
     border: solid 1px grey;
     width: 270px;
 }
 
-.body-main form button{
+.body-main button{
     display: flex;
-    width: 275px;
+    width: 280px;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 45px;
     background-color: #ff6666;
     border: solid 2px #ff6666;
     color: white;
     border-radius: 3px;
     font-size: 16px;
     font-weight: bold;
+    transition: all 0.4s;
+}
+
+.body-main form button:hover{
+    filter: brightness(80%);
 }
 
 .body-main form strong{
@@ -46,4 +53,12 @@
     color:#ff6666 ;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.page-master{
+   display: flex;
+   width: 100%;
+
+   justify-content: space-evenly;
+ 
 }
